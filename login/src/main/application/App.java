@@ -19,7 +19,8 @@ public class App extends Application {
     public void start(Stage stage) throws Exception {
         instance = this;
 
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Login.fxml"));
+        //FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Login.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Main.fxml"));
         primaryStage = stage;
         stage.setTitle("Login");
         stage.setScene(new Scene(fxmlLoader.load()));

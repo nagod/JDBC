@@ -25,7 +25,7 @@
       </HBox>
       <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0">
          <placeholder>
-            <Label text="David sag mir warum" />
+            <Label text="Click on Edit Data to add/ delete Data" />
          </placeholder>
         <columns>
           <TableColumn fx:id="fist_name_col" prefWidth="79.0" text="First Name" />
@@ -44,8 +44,8 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </Button>
+            <Button onAction="#quit" text="Quit" />
          </children>
       </HBox>
-      <HBox prefHeight="0.0" prefWidth="600.0" />
    </children>
 </VBox>

@@ -34,13 +34,15 @@ public class Login implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Label error = new Label("Leider ");
+        Label error = new Label();
         root.getChildren().add(error);
         loginButton.setOnAction( e-> {
-            if ("pw".equals(pwField.getText()) && "user".equals(userField.getText()))
-                App.getInstance().loadWindow("/fxml/Main.fxml","Person");
-            else
-                error.setText("Falsch");
+            if ("pw".equals(pwField.getText())) {
+                if("user".equals(userField.getText())){
+                    App.getInstance().loadWindow("/fxml/Main.fxml","Person");
+                }else error.setText("Username wrong");
+            }else error.setText("Password wrong");
+
         });
     }
 }
