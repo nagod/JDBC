@@ -1,4 +1,4 @@
-package main.java.controller;
+package main.presentation.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -7,7 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
-import main.java.app.App;
+import main.application.App;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -38,7 +38,7 @@ public class Login implements Initializable {
         root.getChildren().add(error);
         loginButton.setOnAction( e-> {
             if ("pw".equals(pwField.getText()) && "user".equals(userField.getText()))
-                App.getInstance().loadWindow("/main.fxml","main");
+                App.getInstance().loadWindow("/fxml/Main.fxml","Person");
             else
                 error.setText("Falsch");
         });

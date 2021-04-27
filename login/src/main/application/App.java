@@ -1,4 +1,4 @@
-package main.java.app;
+package main.application;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -19,7 +19,7 @@ public class App extends Application {
     public void start(Stage stage) throws Exception {
         instance = this;
 
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Login.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Login.fxml"));
         primaryStage = stage;
         stage.setTitle("Login");
         stage.setScene(new Scene(fxmlLoader.load()));
