@@ -1,3 +1,9 @@
 .DS_Store
 **/target/
 /login/.idea
+/login/login.iml
+
+/searchPerson/.idea
+/searchPerson/architecture.iml
+/searchPerson/nbactions.xml
+/searchPerson/target
