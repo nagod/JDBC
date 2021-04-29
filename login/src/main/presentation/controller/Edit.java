@@ -45,6 +45,9 @@ public class Edit implements Initializable {
     private VBox root;
 
     // TODO function für emty check schreiben
+    public void show( String ...args){
+        System.out.println(args);
+    }
     @FXML
     void addPerson(ActionEvent event) {
         String first_name = first_name_textfield.getText();
@@ -69,6 +72,7 @@ public class Edit implements Initializable {
         String favorite_color = favorite_color_texfield.getText();
         Person tmp = new Person(first_name,last_name,city,favorite_color);
         PersonService.getInstance().delete(tmp);
+        show(first_name,last_name,city,favorite_color);
         close();
     }
     @FXML
